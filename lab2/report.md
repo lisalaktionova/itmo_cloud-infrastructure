@@ -142,13 +142,13 @@ flowchart TB
 
 ## 10. Выводы
 
-Для магазина «Пальчики оближешь» спроектирована комбинированная модель хранения: EBS gp3 для виртуальных машин, EBS io2 для транзакционного PostgreSQL, Regional EFS для разделяемых файлов, S3 + CloudFront для сайта и изображений, S3 с Lifecycle для архива. Схема учитывает три AZ и продолжает логику репликации из Лабы 6. Разграничены понятия репликации, снапшотов, резервных копий и защиты от удаления; задана политика снижения стоимости по мере старения данных.
+Для магазина «Пальчики оближешь» спроектирована комбинированная модель хранения: EBS gp3 для виртуальных машин, EBS io2 для транзакционного PostgreSQL, Regional EFS для разделяемых файлов, S3 + CloudFront для сайта и изображений, S3 с Lifecycle для архива. Схема учитывает три AZ. Разграничены понятия репликации, снапшотов, резервных копий и защиты от удаления; задана политика снижения стоимости по мере старения данных.
 
 **Границы выполнения:** расчёт реальной стоимости, нагрузочные замеры IOPS и запуск AWS-ресурсов в этой лабораторной не проводились; приведённые решения являются проектными и требуют проверки на реальной нагрузке перед внедрением.
 
 ## Источники
 
-- [Официальное условие Лабы 5](https://github.com/KeladKaal/cloud-infrastructure/blob/main-rus/lecture-5-cloud-storage/lab.md)
+- [Условие Лабы 5](https://github.com/KeladKaal/cloud-infrastructure/blob/main-rus/lecture-5-cloud-storage/lab.md)
 - [AWS: EBS volume types](https://docs.aws.amazon.com/ebs/latest/userguide/ebs-volume-types.html)
 - [AWS: S3 storage classes](https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage-class-intro.html)
 - [AWS: EFS Regional storage](https://docs.aws.amazon.com/efs/latest/ug/storage-classes.html)
